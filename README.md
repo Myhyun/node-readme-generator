@@ -1,7 +1,7 @@
-# test
+# Node.js README Generator
 
 ## Description
-test
+This project allows users to generate a README markdown file through the command prompt
 ## Table of Contents
 [Installation](#Installation)
 
@@ -16,18 +16,18 @@ test
 [Questions](#Questions)
 
 ## Installation
-test
+To install, simply clone the repo from GitHub and open the index.js file in the terminal command prompt
 ## Usage
-test
+Nothing
 ## License
-This Project is licensed under No License [!(https://img.shields.io/badge/License-undefined%202.0-blue.svg)](undefined)
+This Project is licensed under No License 
 ## Contributing
-test
+Nothing
 ## Tests
-test
+Nothing
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 
-Message me on [Github]("https://github.com/Myhyun/)!
+Message me on [Github]("https://github.com/Myhyun/)
 
-Send me a message at mattyihyun@gmail.com!
+Send me a message at Mattyihyun@gmail.com!

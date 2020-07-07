@@ -1,25 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// array of questions for user
-const licenses = [
-    {
-      name: "MIT",
-      url: "https://opensource.org/licenses/MIT",
-      id: "MIT",
-    },
-    {
-      name: "GNU General Public version 3",
-      url: "https://opensource.org/licenses/GPL-3.0",
-      id: "GPL-3.0-only",
-    },
-    {
-      name: "No License",
-      url: "",
-      id: "NOLICENSE",
-    },
-];
-
 const questions = [
     {
         type: "input",
@@ -70,7 +51,6 @@ const questions = [
 ];
 
 
-// function to write README file
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, function (err) {
         if (err) {
@@ -81,7 +61,7 @@ function writeToFile(filename, data) {
 }
 
 
-// function to initialize program
+
 function init() {
     inquirer.prompt(questions).then((answers) => {
 const writeFile = `# ${answers.title}
@@ -106,7 +86,7 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 ## License
-This Project is licensed under ${answers.licenseName} [!(https://img.shields.io/badge/License-${licenses.id}%202.0-blue.svg)](${licenses.url})
+This Project is licensed under ${answers.licenseName} 
 ## Contributing
 ${answers.contributions}
 ## Tests
@@ -114,12 +94,12 @@ ${answers.tests}
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 
-Message me on [Github]("https://github.com/${answers.github}/)!
+Message me on [Github]("https://github.com/${answers.github}/)
 
 Send me a message at ${answers.email}!
 `;
 writeToFile("README.md", writeFile);
 });
-}
-// function call to initialize program
+};
+
 init();

@@ -75,8 +75,9 @@ ${answers.tests}
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 
-[GitHub]("https://www.github.com/${answers.github}")
-${answers.email}
+Message me on [GitHub]("https://github.com/${answers.github}")!
+
+Send me a message at ${answers.email}!
 `;
 writeToFile("README.md", writeFile);
 });

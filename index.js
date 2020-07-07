@@ -74,6 +74,7 @@ ${answers.contributions}
 ${answers.tests}
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
+
 [GitHub]("https://www.github.com/${answers.github}")
 ${answers.email}
 `;

@@ -58,21 +58,20 @@ function writeToFile(filename, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {
-const writeFile = `
-#${answers.title}
+const writeFile = `# ${answers.title}
 
-##Description
+## Description
 ${answers.description}
-##Installation
+## Installation
 ${answers.installation}
-##Usage
+## Usage
 ${answers.usage}
-##Contributions
+## Contributions
 ${answers.contributions}
-##Tests
+## Tests
 ${answers.tests}
 
-##Questions
+## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 [GitHub]("https://www.github.com/${answers.github})
 ${answers.email}

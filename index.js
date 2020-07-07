@@ -58,27 +58,27 @@ function writeToFile(filename, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        const writeFile = `
-      #${answers.title}
-      
-      ##Description
-      ${answers.description}
-      ##Installation
-      ${answers.installation}
-      ##Usage
-      ${answers.usage}
-      ##Contributions
-      ${answers.contributions}
-      ##Tests
-      ${answers.tests}
-    
-      ##Questions
-      <p> If you have any questions please feel free to contact me via email or GitHub!</p>
-      <p>[GitHub]("https;//www.github.com/${answers.github})</p>
-      <p>${answers.email}</p>
-    `;
-        writeToFile("README.md", writeFile);
-    });
+const writeFile = `
+#${answers.title}
+
+##Description
+${answers.description}
+##Installation
+${answers.installation}
+##Usage
+${answers.usage}
+##Contributions
+${answers.contributions}
+##Tests
+${answers.tests}
+
+##Questions
+If you have any questions please feel free to contact me via email or GitHub!
+[GitHub]("https://www.github.com/${answers.github})
+${answers.email}
+`;
+writeToFile("README.md", writeFile);
+});
 }
 // function call to initialize program
 init();

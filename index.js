@@ -47,14 +47,14 @@ const questions = [
 
 
 // function to write README file
-function writeToFile(fileName, data) {
-} fs.writeFile(filename, data, function (err) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log("Successfully created ReadMe!");
-});
-
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Successfully created ReadMe!");
+    });
+}
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {

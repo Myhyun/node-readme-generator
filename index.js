@@ -66,14 +66,15 @@ ${answers.description}
 ${answers.installation}
 ## Usage
 ${answers.usage}
-## Contributions
+## License
+
+## Contributing
 ${answers.contributions}
 ## Tests
 ${answers.tests}
-
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
-[GitHub]("https://www.github.com/${answers.github})
+[GitHub]("https://www.github.com/${answers.github}")
 ${answers.email}
 `;
 writeToFile("README.md", writeFile);

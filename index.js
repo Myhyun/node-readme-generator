@@ -2,6 +2,24 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // array of questions for user
+const licenses = [
+    {
+      name: "MIT",
+      url: "https://opensource.org/licenses/MIT",
+      id: "MIT",
+    },
+    {
+      name: "GNU General Public version 3",
+      url: "https://opensource.org/licenses/GPL-3.0",
+      id: "GPL-3.0-only",
+    },
+    {
+      name: "No License",
+      url: "",
+      id: "NOLICENSE",
+    },
+];
+
 const questions = [
     {
         type: "input",
@@ -22,6 +40,12 @@ const questions = [
         type: "input",
         message: "Please enter usage information",
         name: "usage",
+    },
+    {
+        type: "list",
+        message: "Choose a license",
+        name: "licenseName",
+        choices: ["MIT", "GNU General Public Version 3", "No License"]
     },
     {
         type: "input",
@@ -55,6 +79,8 @@ function writeToFile(filename, data) {
         console.log("Successfully created ReadMe!");
     });
 }
+
+
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {
@@ -80,7 +106,7 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 ## License
-
+This Project is licensed under ${answers.licenseName} [!(https://img.shields.io/badge/License-${licenses.id}%202.0-blue.svg)](${licenses.url})
 ## Contributing
 ${answers.contributions}
 ## Tests

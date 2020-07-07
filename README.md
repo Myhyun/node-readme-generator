@@ -15,6 +15,6 @@ test
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 
-Message me on [GitHub]("https://github.com/Myhyun")!
+Message me on [Github]("https://github.com/Myhyun/)!
 
 Send me a message at mattyihyun@gmail.com!

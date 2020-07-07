@@ -75,7 +75,7 @@ ${answers.tests}
 ## Questions
 If you have any questions please feel free to contact me via email or GitHub!
 
-Message me on [GitHub]("https://github.com/${answers.github}")!
+Message me on [Github]("https://github.com/${answers.github}/)!
 
 Send me a message at ${answers.email}!
 `;
